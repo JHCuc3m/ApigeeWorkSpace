@@ -1,0 +1,22 @@
+<TargetEndpoint name="default">
+
+  <HTTPTargetConnection>
+    <URL>https://petstore.swagger.io/v2</URL>
+  </HTTPTargetConnection>
+
+
+  <FaultRules>
+    <FaultRule name="default-fault">
+      <!-- Execute VerifyReturnStatusCode unconditionally, it assigns the value of raise_generic_fault -->
+      <Step>
+        <Name>VerifyReturnStatusCode</Name>
+      </Step>
+
+      <!-- Conditionally execute RaiseFault if raise_generic_fault is true -->
+      <Step>
+        <Name>RaiseGenericServerFault</Name>
+        <Condition>(raise_generic_fault = true)</Condition>
+      </Step>
+    </FaultRule>
+  </FaultRules>
+</TargetEndpoint>

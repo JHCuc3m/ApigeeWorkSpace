@@ -1,0 +1,67 @@
+<ProxyEndpoint name="default">
+  <PreFlow name="PreFlow">
+    <Request>
+      <Step>
+        <Name>verify-api-key</Name>
+      </Step>
+
+      <Step>
+        <Name>OAuthV2-VerifyAccessToken</Name>
+      </Step>
+      
+      <!-- Get access token information that is used later for JavaScopesChecking-->
+      <Step>
+        <Name>GetAcessTokenInfo</Name>
+      </Step>
+      
+      <Step>
+        <Name>remove-query-param-apikey</Name>
+      </Step>
+
+      <Step>
+        <Name>impose-quota</Name>
+      </Step>
+
+      <!-- Assigning the OpenAPI Specification to a variable, OpenAPI has to be in json -->    
+      <Step> 
+        <Name>AssignOpenApiVariable</Name>
+      </Step>
+
+      <!-- OpenAPI Scopes checking -->
+
+      <Step> 
+        <Name>JavaScopesChecking</Name>
+      </Step>
+
+      <!-- Parameters Checkings according to OpenAPI -->
+
+      <Step> 
+        <Name>openAPIpolicy</Name>
+      </Step>
+
+    </Request>
+
+    <Response>
+      
+      <!-- Convert to XML in case the response is in Json openAPIpolicy works with XML content only-->
+
+      <Step>
+        <Name>JSONtoXML</Name>
+      </Step>
+
+      <!-- Response parameters checking-->
+
+      <Step> 
+        <Name>openAPIpolicy</Name>
+        <Condition>(response.status.code != 200) and (response.status.code != 500)</Condition>
+      </Step>
+
+    </Response>
+  </PreFlow>
+  <HTTPProxyConnection>
+    <BasePath>helloworld</BasePath>
+  </HTTPProxyConnection>
+  <RouteRule name="default-route">
+    <TargetEndpoint>default</TargetEndpoint>
+  </RouteRule>
+</ProxyEndpoint>

@@ -1,0 +1,19 @@
+[
+  {
+    "attributes": [
+      {
+        "name": "sample_attribute_0",
+        "value": "sample_attribute_value_0"
+      }
+    ],
+    "scopes": ["read", "write:pets", "read:pets"],
+    "environments": [],
+    "apiResources": ["/", "/*", "/**"],
+    "quota": "100",
+    "quotaInterval": "1",
+    "quotaTimeUnit": "minute",
+    "name": "myproduct",
+    "displayName": "myproduct",
+    "proxies": ["helloworld"]
+  }
+]

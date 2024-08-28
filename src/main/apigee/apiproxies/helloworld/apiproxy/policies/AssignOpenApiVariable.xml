@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<AssignMessage name='AssignOpenApiVariable'>
+  <AssignVariable>
+    <Name>openapiSpec</Name>
+    <ResourceURL>oas://openapi.json</ResourceURL>
+  </AssignVariable>
+</AssignMessage>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProxyEndpoint name="outh2">
+  <Flows>
+    <Flow name="GenerateAccessToken">
+      <Description/>
+      <Request>
+        <Step>
+          <Name>GenerateAccessToken</Name>
+        </Step>
+      </Request>
+      <Response/>
+    </Flow>
+  </Flows>
+  <Description>outh2</Description>
+  <HTTPProxyConnection>
+    <BasePath>oauth2/v1</BasePath>
+  </HTTPProxyConnection>
+  <RouteRule name="notarget"/>
+</ProxyEndpoint>
+

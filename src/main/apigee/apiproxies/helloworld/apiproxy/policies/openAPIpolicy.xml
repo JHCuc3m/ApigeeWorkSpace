@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<OASValidation continueOnError="false" enabled="true" name="openAPIpolicy">
+    <DisplayName>openAPIpolicy</DisplayName>
+    <Properties/>
+    <Source>message</Source>
+    <Options>
+        <ValidateMessageBody>true</ValidateMessageBody>
+        <AllowUnspecifiedParameters>false</AllowUnspecifiedParameters>
+    </Options>
+    <OASResource>oas://openapi.yaml</OASResource>
+</OASValidation>

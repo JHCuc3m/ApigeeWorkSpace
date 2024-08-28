@@ -1,0 +1,26 @@
+[
+  {
+    "attributes": [
+      {
+        "name": "sample_attribute_0",
+        "value": "sample_attribute_value_0"
+      }
+    ],
+    "email": "ahamilton@example.com",
+    "userName": "ahamilton",
+    "firstName": "Alex",
+    "lastName": "Hamilton"
+  },
+  {
+    "attributes": [
+      {
+        "name": "sample_attribute_0",
+        "value": "sample_attribute_value_0"
+      }
+    ],
+    "email": "100472232@alumnos.uc3m.es",
+    "userName": "Jiahao",
+    "firstName": "Jiahao",
+    "lastName": "Chen"
+  }
+]
