@@ -18,3 +18,7 @@ This repository contains an Apigee workspace that focuses on validating proxy en
 ### 3. Status Code Validation
 - **Script:** `resources/jsc/raiseGenericFault.js`
 - **Description:** A custom JavaScript script that checks and returns appropriate HTTP status codes based on validation outcomes.
+
+## Important Notes
+- Ensure that the OpenAPI Specification version used is **3.0** for the `<OASValidation>` policy to function correctly.
+- The OpenAPI file must be in **JSON format** for the custom JavaScript scripts to operate as expected.
